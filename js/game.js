@@ -131,7 +131,7 @@ class game {
         document.addEventListener("mousedown", evt => {
             var x = evt.offsetX == undefined ? evt.layerX : evt.offsetX;
             var y = evt.offsetY == undefined ? evt.layerY : evt.offsetY;
-            mySnake[0].speed = 20;
+            mySnake[0].speed = 2;
         })
 
         document.addEventListener("mousemove", evt => {
@@ -144,7 +144,7 @@ class game {
         document.addEventListener("mouseup", evt => {
             var x = evt.offsetX == undefined ? evt.layerX : evt.offsetX;
             var y = evt.offsetY == undefined ? evt.layerY : evt.offsetY;
-            mySnake[0].speed = 10;
+            mySnake[0].speed = 1;
         })
     }
 
