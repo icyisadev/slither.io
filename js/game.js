@@ -2,7 +2,7 @@ game_W = 0, game_H = 0;
 
 var bg_im = new Image();
 bg_im.src = "images/Map2.png";
-SPEED = 6;
+SPEED = 1;
 MaxSpeed = 0;
 chX = chY = 1;
 mySnake = [];
