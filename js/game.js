@@ -343,9 +343,3 @@ class game {
 }
 
 var g = new game();
-
-
-document.body.style.cursor = "url(\"data:image/svg+xml;utf8," +
-  "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'>" +
-  "<polygon points='16,0 32,16 16,32 0,16' fill='white' stroke='black' stroke-width='2'/>" +
-  "</svg>\") 16 16, auto";
