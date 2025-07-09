@@ -1,7 +1,8 @@
 game_W = 0, game_H = 0;
 
 var bg_im = new Image();
-bg_im.src = "images/Map2.png";
+//bg_im.src = "images/Map2.png";
+bg_im.src = "https://i.imgur.com/WPlOXC8.gif";
 SPEED = 1;
 MaxSpeed = 0;
 chX = chY = 1;
