@@ -18,7 +18,7 @@ Xfocus = Yfocus = 0;
 XX = 0, YY = 0;
 
 names = [
-    "donald trump", "kamala harris", "joe biden", "micheal jorden", "that one kid that aurafarms on that boat in taiwan that idk the name of"
+    "donald trump", "kamala harris", "joe biden", "michelle jordan"
 ];
 
 class game {
