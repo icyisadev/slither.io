@@ -95,7 +95,7 @@ class game {
 
         for (let i = 0; i < Nsnake; i++)
             mySnake[i] = new snake(names[Math.floor(Math.random() * 99999) % names.length], this, Math.floor(2 * minScore + Math.random() * 2 * minScore), (Math.random() - Math.random()) * sizeMap, (Math.random() - Math.random()) * sizeMap);
-        mySnake[0] = new snake("HaiZuka", this, minScore, game_W / 2, game_H / 2);
+        mySnake[0] = new snake("User", this, minScore, game_W / 2, game_H / 2);
         for (let i = 0; i < NFood; i++) {
             FOOD[i] = new food(this, this.getSize() / (7 + Math.random() * 10), (Math.random() - Math.random()) * sizeMap, (Math.random() - Math.random()) * sizeMap);
         }
@@ -285,10 +285,10 @@ class game {
                     let t = data[i];
                     data[i] = data[j];
                     data[j] = t;
-                }
+                }f
         let index = 0;
         for (let i = 1; i < mySnake.length; i++)
-            if (data[i].name == "HaiZuka")
+            if (data[i].name == "User")
                 index = i;
         this.context.font = this.getSize() / 4 + 'px Arial Black';
         for (let i = 0; i < 10; i++) {
