@@ -8,7 +8,7 @@ chX = chY = 1;
 mySnake = [];
 FOOD = [];
 NFood = 2000;
-Nsnake = 500;
+Nsnake = 20;
 sizeMap = 2000;
 index = 0;
 minScore = 200;
@@ -18,7 +18,7 @@ Xfocus = Yfocus = 0;
 XX = 0, YY = 0;
 
 names = [
-    "Donald Trump"
+    "donald trump", "kamala harris", "joe biden", "micheal jorden", "that one kid that aurafarms on that boat in taiwan that idk the name of"
 ];
 
 class game {
