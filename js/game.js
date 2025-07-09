@@ -1,15 +1,14 @@
 game_W = 0, game_H = 0;
 
 var bg_im = new Image();
-//bg_im.src = "images/Map2.png";
-bg_im.src = "https://i.imgur.com/WPlOXC8.gif";
+bg_im.src = "images/Map2.png";
 SPEED = 1;
 MaxSpeed = 0;
 chX = chY = 1;
 mySnake = [];
 FOOD = [];
 NFood = 2000;
-Nsnake = 20;
+Nsnake = 500;
 sizeMap = 2000;
 index = 0;
 minScore = 200;
@@ -18,66 +17,8 @@ die = false;
 Xfocus = Yfocus = 0;
 XX = 0, YY = 0;
 
-names = ["Ahmed Steinke",
-    "Aubrey Brass",
-    "Johanne Boothe",
-    "Sunni Markland",
-    "Tifany Sugar",
-    "Latonya Tully",
-    "Bobette Huckaby",
-    "Daryl Nowicki",
-    "Lizeth Kremer",
-    "Chiquita Pitt",
-    "Christinia Siler",
-    "Rena Reep",
-    "Evan Mcknight",
-    "Sofia Freeland",
-    "Virgie Vaughns",
-    "Kit Polen",
-    "Emma Rutland",
-    "Queen Guertin",
-    "Cecily Pasquariello",
-    "Palmer Myer",
-    "Kera Quinton",
-    "Domonique Diebold",
-    "Henriette Sockwell",
-    "Adeline Pettway",
-    "Shu Osby",
-    "Shantay Wallner",
-    "Isaias Drewes",
-    "Lettie Gatz",
-    "Remona Maravilla",
-    "Jessenia Mick",
-    "Noelle Rickey",
-    "Lavon Revard",
-    "Shavonne Stogsdill",
-    "Hailey Razo",
-    "Bart Somerville",
-    "Hannah Masker",
-    "Frederica Farmer",
-    "Glennie Thorpe",
-    "Sherrell Arriaga",
-    "Lawanda Maines",
-    "Douglass Watts",
-    "Naida Grund",
-    "Branda Bussiere",
-    "Carmelo Savory",
-    "Gabriela Blanchette",
-    "Tran Huf",
-    "Antoinette Hinrichs",
-    "Deborah Primmer",
-    "Drusilla Mcvea",
-    "Charlsie Acy",
-    "Nadene Royce",
-    "Danette Touchet",
-    "Luana Endo",
-    "Elvina Hibbitts",
-    "Ludivina Dahle",
-    "Fabiola Mcwhirter",
-    "Isabella Mosier",
-    "Lon Lassiter",
-    "Laurence Hanning",
-    "NamZ Bede"
+names = [
+    "Donald Trump"
 ];
 
 class game {
