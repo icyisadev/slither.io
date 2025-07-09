@@ -222,31 +222,6 @@ class game {
             }
     }
 
-    checkDie() {
-        for (let i = 0; i < mySnake.length; i++)
-            for (let j = 0; j < mySnake.length; j++)
-                if (i != j) {
-                    let kt = true;
-                    for (let k = 0; k < mySnake[j].v.length; k++)
-                        if (this.range(mySnake[i].v[0].x, mySnake[i].v[0].y, mySnake[j].v[k].x, mySnake[j].v[k].y) < mySnake[i].size)
-                            kt = false;
-                    if (!kt) {
-                        for (let k = 0; k < mySnake[i].v.length; k += 5) {
-                            FOOD[index] = new food(this, this.getSize() / (2 + Math.random() * 2), mySnake[i].v[k].x + Math.random() * mySnake[i].size / 2, mySnake[i].v[k].y + Math.random() * mySnake[i].size / 2);
-                            FOOD[index++].value = 0.4 * mySnake[i].score / (mySnake[i].v.length / 5);
-                            if (index >= FOOD.length)
-                                index = 0;
-                        }
-                        if (i != 0)
-                            mySnake[i] = new snake(names[Math.floor(Math.random() * 99999) % names.length], this, Math.max(Math.floor((mySnake[0].score > 10 * minScore) ? mySnake[0].score / 10 : minScore), mySnake[i].score / 10), this.randomXY(XX), this.randomXY(YY));
-                        else {
-                            window.alert("Your Score: " + Math.floor(mySnake[i].score));
-                            die = true;
-                            window.location.href = ".";
-                        }
-                    }
-                }
-    }
 
     render() {
         if (this.canvas.width != document.documentElement.clientWidth || this.canvas.height != document.documentElement.clientHeight) {

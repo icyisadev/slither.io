@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #333;
+        font-family: sans-serif;
+      }
+
+      canvas {
+        border: 2px solid #fff;
+        background-color: #000;
+        display: block; /* Remove extra space below canvas */
+      }
+
+      #gameOverScreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        display: none; /* Hidden by default */
+        z-index: 1000;
+      }
+
+      #gameOverScreen h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+      }
+
+      #gameOverScreen p {
+        font-size: 1.5em;
+        margin: 10px 0;
+      }
+
+      #playAgainButton {
+        background-color: #ff0000; /* Red background */
+        color: white; /* White text */
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.8em;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 30px;
+        transition: background-color 0.3s ease;
+      }
+
+      #playAgainButton:hover {
+        background-color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="gameOverScreen">
+      <h1>Game Over!</h1>
+      <p>Your Score: <span id="currentScore">0</span></p>
+      <p>High Score: <span id="highScore">0</span></p>
+      <button id="playAgainButton">Play Again</button>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
