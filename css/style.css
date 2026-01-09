@@ -61,6 +61,11 @@ html { overflow-y: hidden; }
     justify-content: center;
     background: rgba(0,0,0,0.45);
     z-index: 1000;
+    transition: opacity 400ms ease-out;
+}
+.home-overlay.fade-out{
+    opacity: 0;
+    pointer-events: none;
 }
 .home-card{
     background: #ffffffee;

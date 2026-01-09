@@ -40,8 +40,11 @@
         var start = document.getElementById('startBtn');
         start.addEventListener('click', function() {
             var overlay = document.getElementById('homeOverlay');
-            overlay.style.display = 'none';
-            if (typeof startGame === 'function') startGame();
+            overlay.classList.add('fade-out');
+            setTimeout(function() {
+                overlay.style.display = 'none';
+                if (typeof startGame === 'function') startGame();
+            }, 400);
         });
 
         // Placeholder auth handlers (no-op)
