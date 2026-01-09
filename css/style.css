@@ -76,4 +76,21 @@ html { overflow-y: hidden; }
 /* Ensure canvas appended by game is behind overlay */
 canvas{ position: relative; z-index: 0; display: block; }
 
+/* Score box shown on home screen */
+.score-box{
+    margin-top: 14px;
+    background: linear-gradient(180deg,#ffffff,#f3f3f3);
+    padding: 12px 18px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transform-origin: top center;
+    animation: pop-in 420ms cubic-bezier(.2,.85,.32,1);
+}
+.score-row{ margin: 6px 0; color: #222; font-weight: 600; }
+
+@keyframes pop-in{
+    from{ transform: translateY(-6px) scale(0.95); opacity: 0 }
+    to{ transform: translateY(0) scale(1); opacity: 1 }
+}
+
 

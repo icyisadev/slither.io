@@ -182,9 +182,15 @@ class game {
                         if (i != 0)
                             mySnake[i] = new snake(names[Math.floor(Math.random() * 99999) % names.length], this, Math.max(Math.floor((mySnake[0].score > 10 * minScore) ? mySnake[0].score / 10 : minScore), mySnake[i].score / 10), this.randomXY(XX), this.randomXY(YY));
                         else {
-                            window.alert("Your Score: " + Math.floor(mySnake[i].score));
+                            let latest = Math.floor(mySnake[i].score);
+                            let high = parseInt(localStorage.getItem('slither_highscore') || '0', 10);
+                            if (latest > high) {
+                                localStorage.setItem('slither_highscore', latest);
+                                high = latest;
+                            }
                             die = true;
-                            window.location.href = ".";
+                            if (window.showHomeOverlay)
+                                window.showHomeOverlay(latest, high);
                         }
                     }
                 }
@@ -284,4 +290,42 @@ class game {
     }
 }
 
-var g = new game();
+// Expose a function to show the home overlay and scores
+window.showHomeOverlay = function(latest, high) {
+    try {
+        var overlay = document.getElementById('homeOverlay');
+        var scoreBox = document.getElementById('scoreBox');
+        if (overlay) overlay.style.display = 'flex';
+        if (scoreBox) scoreBox.style.display = 'block';
+        var hs = document.getElementById('highScore');
+        var ls = document.getElementById('latestScore');
+        if (hs) hs.textContent = high;
+        if (ls) ls.textContent = latest;
+    } catch (e) { }
+}
+
+// Start or restart the game
+function startGame() {
+    // remove existing canvas if present
+    try {
+        if (window.g && window.g.canvas && window.g.canvas.parentNode) {
+            window.g.canvas.parentNode.removeChild(window.g.canvas);
+        }
+    } catch (e) { }
+
+    // reset globals
+    mySnake = [];
+    FOOD = [];
+    index = 0;
+    die = false;
+    XX = 0; YY = 0; Xfocus = 0; Yfocus = 0;
+
+    var overlay = document.getElementById('homeOverlay');
+    if (overlay) overlay.style.display = 'none';
+    var scoreBox = document.getElementById('scoreBox');
+    if (scoreBox) scoreBox.style.display = 'none';
+
+    window.g = new game();
+}
+
+window.startGame = startGame;
