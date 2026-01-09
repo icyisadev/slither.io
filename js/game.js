@@ -342,4 +342,10 @@ class game {
     }
 }
 
-var g = new game();
+// Do not auto-start the game on load. Call `startGame()` to begin.
+function startGame() {
+    if (window.g && typeof window.g !== 'undefined') return;
+    window.g = new game();
+}
+
+window.startGame = startGame;

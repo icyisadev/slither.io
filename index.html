@@ -8,8 +8,42 @@
         content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
     />
 </head>
-<body></body>
+<body>
+    <header class="topbar">
+        <div class="profile">
+            <img src="images/body/default-avatar.png" alt="Profile" class="profile-pic">
+            <span class="username">Guest</span>
+        </div>
+        <div class="auth">
+            <button id="loginBtn" class="btn">Login</button>
+            <button id="signupBtn" class="btn">Sign Up</button>
+        </div>
+    </header>
+
+    <div id="homeOverlay" class="home-overlay">
+        <div class="home-card">
+            <h1>Slither.io</h1>
+            <p class="subtitle">Classic multiplayer snake — local demo</p>
+            <button id="startBtn" class="start-btn">Start Game</button>
+        </div>
+    </div>
+</body>
 <script type="text/javascript" src="js/food.js"></script>
 <script type="text/javascript" src="js/snake.js"></script>
 <script type="text/javascript" src="js/game.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var start = document.getElementById('startBtn');
+        start.addEventListener('click', function() {
+            var overlay = document.getElementById('homeOverlay');
+            overlay.style.display = 'none';
+            if (typeof startGame === 'function') startGame();
+        });
+
+        // Placeholder auth handlers (no-op)
+        document.getElementById('loginBtn').addEventListener('click', function(){ alert('Login not implemented'); });
+        document.getElementById('signupBtn').addEventListener('click', function(){ alert('Sign up not implemented'); });
+    });
+</script>
+</html>
 </html>

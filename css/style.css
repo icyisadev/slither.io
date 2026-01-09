@@ -21,3 +21,59 @@ html {
 
 html { overflow-y: hidden; }
 
+/* Top bar: profile left, auth buttons right */
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    box-sizing: border-box;
+    z-index: 1001;
+}
+.profile{ display: flex; align-items: center; gap: 8px; }
+.profile-pic{ width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.username{ font-weight: 600; color: #222; }
+.auth .btn{ margin-left: 8px; }
+
+/* Simple button styles */
+.btn, .start-btn{
+    background: #2d89ef;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+.btn:hover, .start-btn:hover{ opacity: 0.95; }
+
+/* Home overlay centered */
+.home-overlay{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.45);
+    z-index: 1000;
+}
+.home-card{
+    background: #ffffffee;
+    padding: 28px 36px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+.home-card h1{ margin: 0 0 8px 0; font-size: 34px; }
+.home-card .subtitle{ margin: 0 0 18px 0; color: #444; }
+.start-btn{ font-size: 18px; padding: 12px 22px; }
+
+/* Ensure canvas appended by game is behind overlay */
+canvas{ position: relative; z-index: 0; display: block; }
+
+
