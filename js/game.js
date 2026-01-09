@@ -233,7 +233,7 @@ class game {
                     let t = data[i];
                     data[i] = data[j];
                     data[j] = t;
-                }f
+                }
         let index = 0;
         for (let i = 1; i < mySnake.length; i++)
             if (data[i].name == "User")
