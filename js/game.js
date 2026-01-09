@@ -17,66 +17,8 @@ die = false;
 Xfocus = Yfocus = 0;
 XX = 0, YY = 0;
 
-names = ["Ahmed Steinke",
-    "Aubrey Brass",
-    "Johanne Boothe",
-    "Sunni Markland",
-    "Tifany Sugar",
-    "Latonya Tully",
-    "Bobette Huckaby",
-    "Daryl Nowicki",
-    "Lizeth Kremer",
-    "Chiquita Pitt",
-    "Christinia Siler",
-    "Rena Reep",
-    "Evan Mcknight",
-    "Sofia Freeland",
-    "Virgie Vaughns",
-    "Kit Polen",
-    "Emma Rutland",
-    "Queen Guertin",
-    "Cecily Pasquariello",
-    "Palmer Myer",
-    "Kera Quinton",
-    "Domonique Diebold",
-    "Henriette Sockwell",
-    "Adeline Pettway",
-    "Shu Osby",
-    "Shantay Wallner",
-    "Isaias Drewes",
-    "Lettie Gatz",
-    "Remona Maravilla",
-    "Jessenia Mick",
-    "Noelle Rickey",
-    "Lavon Revard",
-    "Shavonne Stogsdill",
-    "Hailey Razo",
-    "Bart Somerville",
-    "Hannah Masker",
-    "Frederica Farmer",
-    "Glennie Thorpe",
-    "Sherrell Arriaga",
-    "Lawanda Maines",
-    "Douglass Watts",
-    "Naida Grund",
-    "Branda Bussiere",
-    "Carmelo Savory",
-    "Gabriela Blanchette",
-    "Tran Huf",
-    "Antoinette Hinrichs",
-    "Deborah Primmer",
-    "Drusilla Mcvea",
-    "Charlsie Acy",
-    "Nadene Royce",
-    "Danette Touchet",
-    "Luana Endo",
-    "Elvina Hibbitts",
-    "Ludivina Dahle",
-    "Fabiola Mcwhirter",
-    "Isabella Mosier",
-    "Lon Lassiter",
-    "Laurence Hanning",
-    "NamZ Bede"
+names = [
+    "donald trump", "kamala harris", "joe biden", "michelle jordan"
 ];
 
 class game {
@@ -342,10 +284,4 @@ class game {
     }
 }
 
-// Do not auto-start the game on load. Call `startGame()` to begin.
-function startGame() {
-    if (window.g && typeof window.g !== 'undefined') return;
-    window.g = new game();
-}
-
-window.startGame = startGame;
+var g = new game();
